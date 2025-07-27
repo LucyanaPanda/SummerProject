@@ -1,0 +1,115 @@
+using Unity.Cinemachine;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.InputSystem;
+using Cursor = UnityEngine.Cursor;
+
+public class PlayerMovement : MonoBehaviour
+{
+    [Header("Movement Settings")]
+    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private bool canMove = true;
+
+    [Header("Player Component")]
+    [SerializeField] private Transform playerTransform;
+    [SerializeField] private Transform orientation;
+
+    [Header("Camera")]
+    [SerializeField] private CinemachineOrbitalFollow cameraFollowScript;
+
+    private Vector3 inputVector;
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    private void Update()
+    {
+        if (canMove)
+        {
+            Rotate();
+            Move();
+        }
+    }
+
+    public void Rotate()
+    {
+        if (canMove)
+        {
+            // rotate orientation
+            Vector3 viewDir = playerTransform.position - new Vector3(cameraFollowScript.transform.position.x, playerTransform.position.y, cameraFollowScript.transform.position.z);
+            orientation.forward = viewDir.normalized;
+
+            // rotate player object
+            float horizontalInput = inputVector.x;
+            float verticalInput = inputVector.z;
+
+            Vector3 inputDir = orientation.forward * verticalInput + orientation.right * horizontalInput;
+
+            if (inputDir != Vector3.zero)
+            {
+                transform.forward = Vector3.Slerp(transform.forward, inputDir.normalized, Time.deltaTime * 10f);
+            }
+        }
+    }
+
+    public void Move()
+    {
+        Vector3 playerForward = orientation.forward;
+        Vector3 playerRight = orientation.right;
+
+        //// Flatten the vectors (prevent vertical movement)
+        playerForward.y = 0f;
+        playerRight.y = 0f;
+        playerForward.Normalize();
+        playerRight.Normalize();
+
+        //// Combine input with camera direction
+        Vector3 moveDirection = playerForward * inputVector.z + playerRight * inputVector.x;
+        moveDirection.Normalize();
+
+        playerTransform.position += moveDirection * moveSpeed * Time.deltaTime;
+    }
+
+    public void OnMove(InputAction.CallbackContext context)
+    {
+         // Capture the initial direction when the action starts
+         inputVector = context.ReadValue<Vector3>();
+    }
+
+    public void OnShowCursor(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            // Show the cursor and unlock it when the action starts
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
+            // Disable player movement when the cursor is shown
+            canMove = false;
+
+            // Pause the camera follow script 
+            if (cameraFollowScript != null)
+                cameraFollowScript.enabled = false;
+            else
+                Debug.LogWarning("Camera follow script is not assigned.");
+        }
+        else if (context.canceled)
+        {
+            // Hide the cursor and lock it when the action ends
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+
+            // Re-enable player movement when the cursor is hidden
+            canMove = true;
+
+            // Resume the camera follow script
+            if (cameraFollowScript != null)
+                cameraFollowScript.enabled = true;
+            else
+                Debug.LogWarning("Camera follow script is not assigned.");
+        }
+    }
+}
