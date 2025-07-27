@@ -15,13 +15,13 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "MoveCamera",
-                    "type": "Value",
-                    "id": "d2748654-5033-40fc-88b5-90286aa93bfc",
+                    "name": "ShowCursor",
+                    "type": "Button",
+                    "id": "fb2f2211-4f4a-4611-8b96-60ce33bf9ecc",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -104,12 +104,12 @@
                 },
                 {
                     "name": "",
-                    "id": "33470d44-13ec-4ed8-b7e5-0197c445be75",
-                    "path": "<Mouse>/delta",
+                    "id": "4ec020fa-21ca-41b7-bfaf-22d6f429be0a",
+                    "path": "<Keyboard>/alt",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MoveCamera",
+                    "action": "ShowCursor",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
