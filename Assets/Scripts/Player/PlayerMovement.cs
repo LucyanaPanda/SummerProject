@@ -1,5 +1,4 @@
 using Unity.Cinemachine;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Cursor = UnityEngine.Cursor;
@@ -8,7 +7,14 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement Settings")]
     [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float rotateSpeed = 10f;
     [SerializeField] private bool canMove = true;
+
+    [Header("Jump Settings")]
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] private CapsuleCollider collider;
+    [SerializeField] private float jumpForce = 10f;
+    [SerializeField] private float gravityScale = 5f;
 
     [Header("Player Component")]
     [SerializeField] private Transform playerTransform;
@@ -34,6 +40,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        rb.AddForce(Physics.gravity * (gravityScale - 1) * rb.mass);
+    }
+
     public void Rotate()
     {
         if (canMove)
@@ -50,23 +61,23 @@ public class PlayerMovement : MonoBehaviour
 
             if (inputDir != Vector3.zero)
             {
-                transform.forward = Vector3.Slerp(transform.forward, inputDir.normalized, Time.deltaTime * 10f);
+                transform.forward = Vector3.Slerp(transform.forward, inputDir.normalized, Time.deltaTime * rotateSpeed);
             }
         }
     }
-
+    #region Movement
     public void Move()
     {
         Vector3 playerForward = orientation.forward;
         Vector3 playerRight = orientation.right;
 
-        //// Flatten the vectors (prevent vertical movement)
+        // Flatten the vectors (prevent vertical movement)
         playerForward.y = 0f;
         playerRight.y = 0f;
         playerForward.Normalize();
         playerRight.Normalize();
 
-        //// Combine input with camera direction
+        // Combine input with camera direction
         Vector3 moveDirection = playerForward * inputVector.z + playerRight * inputVector.x;
         moveDirection.Normalize();
 
@@ -79,6 +90,29 @@ public class PlayerMovement : MonoBehaviour
          inputVector = context.ReadValue<Vector3>();
     }
 
+    #endregion
+
+    #region Jump
+    public void OnJump(InputAction.CallbackContext context)
+    {
+        if (context.started && IsGrounded())
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
+    }
+
+    private bool IsGrounded()
+    {
+        Vector3 center = transform.position + collider.center;
+
+        Vector3 point1 = center + Vector3.up * (collider.height / 2 - collider.radius);
+        Vector3 point2 = center - Vector3.up * (collider.height / 2 - collider.radius);
+
+        return Physics.CapsuleCast(point1, point2, collider.radius, Vector3.down, transform.localScale.y + 0.1f);
+    }
+    #endregion
+
+    #region Show Cursor
     public void OnShowCursor(InputAction.CallbackContext context)
     {
         if (context.started)
@@ -112,4 +146,5 @@ public class PlayerMovement : MonoBehaviour
                 Debug.LogWarning("Camera follow script is not assigned.");
         }
     }
+    #endregion
 }
