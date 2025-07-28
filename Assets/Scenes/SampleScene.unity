@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 210392110}
   m_Layer: 0
   m_Name: PlayerBody
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 322040297}
   m_Layer: 0
   m_Name: PLAYER
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1220,7 +1220,7 @@ GameObject:
   - component: {fileID: 1009080557}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1325,7 +1325,7 @@ GameObject:
   - component: {fileID: 1900466232}
   m_Layer: 0
   m_Name: Orientation
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
