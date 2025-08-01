@@ -17,11 +17,9 @@ public class LockCamera : MonoBehaviour
 
         if (hit.collider != null  && !hit.collider.CompareTag("Player"))
         {
-            print(hit.collider.gameObject.name);
             float distance = Vector3.Magnitude(hit.point - playerTransform.position);
             distance = Mathf.Min(distance, maxRadius);
             cameraFollowScript.Radius = distance;
-            print(distance);
         }
         else
             cameraFollowScript.Radius = maxRadius;
