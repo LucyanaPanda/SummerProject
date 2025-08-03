@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Jump Settings")]
     [SerializeField] private Rigidbody rb;
-    [SerializeField] private CapsuleCollider collider;
+    [SerializeField] private CapsuleCollider playerCollider;
     [SerializeField] private float jumpForce = 10f;
     [SerializeField] private float gravityScale = 5f;
 
@@ -103,12 +103,12 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsGrounded()
     {
-        Vector3 center = transform.position + collider.center;
+        Vector3 center = transform.position + playerCollider.center;
 
-        Vector3 point1 = center + Vector3.up * (collider.height / 2 - collider.radius);
-        Vector3 point2 = center - Vector3.up * (collider.height / 2 - collider.radius);
+        Vector3 point1 = center + Vector3.up * (playerCollider.height / 2 - playerCollider.radius);
+        Vector3 point2 = center - Vector3.up * (playerCollider.height / 2 - playerCollider.radius);
 
-        return Physics.CapsuleCast(point1, point2, collider.radius, Vector3.down, transform.localScale.y + 0.1f);
+        return Physics.CapsuleCast(point1, point2, playerCollider.radius, Vector3.down, transform.localScale.y + 0.1f);
     }
     #endregion
 
