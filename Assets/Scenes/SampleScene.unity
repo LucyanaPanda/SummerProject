@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionRange: 1.5
-  playerCollider: {fileID: 0}
+  playerCollider: {fileID: 210392105}
 --- !u!1 &220797089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1346,7 +1346,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &835736880
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1693,6 +1693,7 @@ GameObject:
   - component: {fileID: 1174441201}
   - component: {fileID: 1174441200}
   - component: {fileID: 1174441199}
+  - component: {fileID: 1174441203}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1783,6 +1784,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1174441203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174441198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3781a950064102b439a5d50e95499183, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInteract: {fileID: 210392112}
+  interactionCanvas: {fileID: 835736879}
 --- !u!1 &1261352668
 GameObject:
   m_ObjectHideFlags: 0

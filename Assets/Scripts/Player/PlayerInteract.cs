@@ -17,17 +17,16 @@ public class PlayerInteract : MonoBehaviour
     private float nearestDistance = Mathf.Infinity;
 
     private readonly UnityEvent _onNearestInteractable = new();
+    private readonly UnityEvent _onNotNearestInteractable = new();
 
-    private void Start()
+
+    private void Update()
     {
         center = transform.position + playerCollider.center;
 
         point1 = center + Vector3.up * (playerCollider.height * interactionRange / 2 - playerCollider.radius);
         point2 = center - Vector3.up * (playerCollider.height * interactionRange / 2 - playerCollider.radius);
-    }
 
-    private void Update()
-    {
         Collider[] colliders = Physics.OverlapCapsule(point1, point2, playerCollider.radius * interactionRange); 
         GetNearestInteractable(colliders);
 
@@ -37,6 +36,7 @@ public class PlayerInteract : MonoBehaviour
         }
         else
         {
+            _onNotNearestInteractable.Invoke();
             Debug.Log("No interactable in range.");
         }
     }
@@ -62,11 +62,12 @@ public class PlayerInteract : MonoBehaviour
 
     public void OnInteract(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && nearestInteractable != null)
         {
-            
+            nearestInteractable.Interact();
         }
     }
 
-    public UnityEvent OnButtonPressed => _onNearestInteractable;
+    public UnityEvent OnNearestInteractable => _onNearestInteractable;
+    public UnityEvent OnNotNearestInteractable => _onNotNearestInteractable;
 }
