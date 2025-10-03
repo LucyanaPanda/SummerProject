@@ -276,13 +276,14 @@ MonoBehaviour:
   moveSpeed: 5
   rotateSpeed: 10
   canMove: 1
-  rb: {fileID: 210392109}
-  playerCollider: {fileID: 0}
   jumpForce: 20
   gravityScale: 5
   playerTransform: {fileID: 322040297}
   orientation: {fileID: 1900466232}
   cameraFollowScript: {fileID: 697057912}
+  zoomSpeed: 2
+  minDistance: 2
+  maxDistance: 5
 --- !u!114 &210392111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -372,6 +373,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 46ffd371-3aab-4e9e-9f30-a9dd06c44c39
     m_ActionName: 'Player/Interact[/Keyboard/e]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 210392110}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnCameraZoom
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c6a8cc1a-be92-442b-8e4b-d30ca8e88e16
+    m_ActionName: 'Player/CameraZoom[/Mouse/scroll/down,/Mouse/scroll/up]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -390,7 +407,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionRange: 1.5
-  playerCollider: {fileID: 210392105}
 --- !u!1 &220797089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1279,7 +1295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 322040297}
   cameraFollowScript: {fileID: 697057912}
-  maxRadius: 5
+  currentRadius: 5
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
