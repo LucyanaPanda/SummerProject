@@ -3,11 +3,13 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
+
+[RequireComponent(typeof(CapsuleCollider))]
 public class PlayerInteract : MonoBehaviour
 {
     [Header("Interaction Settings")]
     [SerializeField] private float interactionRange = 1.5f;
-    [SerializeField] private CapsuleCollider playerCollider;
+    [HideInInspector] private CapsuleCollider playerCollider;
     private Vector3 center;
     private Vector3 point1;
     private Vector3 point2;
@@ -19,6 +21,11 @@ public class PlayerInteract : MonoBehaviour
     private readonly UnityEvent _onNearestInteractable = new();
     private readonly UnityEvent _onNotNearestInteractable = new();
 
+
+    private void Awake()
+    {
+        playerCollider = GetComponent<CapsuleCollider>();
+    }
 
     private void Update()
     {
@@ -37,7 +44,6 @@ public class PlayerInteract : MonoBehaviour
         else
         {
             _onNotNearestInteractable.Invoke();
-            Debug.Log("No interactable in range.");
         }
     }
 

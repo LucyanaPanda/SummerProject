@@ -3,6 +3,10 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Cursor = UnityEngine.Cursor;
 
+
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent (typeof(CapsuleCollider))]
+
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement Settings")]
@@ -11,8 +15,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool canMove = true;
 
     [Header("Jump Settings")]
-    [SerializeField] private Rigidbody rb;
-    [SerializeField] private CapsuleCollider playerCollider;
+    [HideInInspector] private Rigidbody rb;
+    [HideInInspector] private CapsuleCollider playerCollider;
     [SerializeField] private float jumpForce = 10f;
     [SerializeField] private float gravityScale = 5f;
 
@@ -22,8 +26,17 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Camera")]
     [SerializeField] private CinemachineOrbitalFollow cameraFollowScript;
+    [SerializeField] private float zoomSpeed = 2f;
+    [SerializeField] private float minDistance = 2f;
+    [SerializeField] private float maxDistance = 5f;
 
     private Vector3 inputVector;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+        playerCollider = GetComponent<CapsuleCollider>();
+    }
 
     private void Start()
     {
@@ -45,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(Physics.gravity * (gravityScale - 1) * rb.mass);
     }
 
+    #region Rotation
     public void Rotate()
     {
         if (canMove)
@@ -65,6 +79,8 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+    #endregion
+
     #region Movement
     public void Move()
     {
@@ -146,5 +162,33 @@ public class PlayerMovement : MonoBehaviour
                 Debug.LogWarning("Camera follow script is not assigned.");
         }
     }
+    #endregion
+
+    #region Camera Zoom
+
+    public void Zoom(float zoomValue)
+    {
+        float currentRadiusCamera = cameraFollowScript.Radius;
+
+        float zoom = currentRadiusCamera + zoomValue * zoomSpeed * Time.deltaTime;
+
+        if (zoom < maxDistance)
+        {
+            zoom = Mathf.Max(zoom, minDistance);
+        }
+        else
+        {
+            zoom = Mathf.Min(zoom, maxDistance);
+        }
+
+        cameraFollowScript.Radius = zoom;
+        print(currentRadiusCamera + "    " + zoom);
+    }
+
+    public void OnCameraZoom(InputAction.CallbackContext context)
+    {
+        Zoom(context.ReadValue<float>());
+    }
+
     #endregion
 }
