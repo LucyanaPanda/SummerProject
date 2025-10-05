@@ -15,10 +15,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool canMove = true;
 
     [Header("Jump Settings")]
-    [HideInInspector] private Rigidbody rb;
-    [HideInInspector] private CapsuleCollider playerCollider;
+    [SerializeField] private LayerMask jumpLayerMask;
     [SerializeField] private float jumpForce = 10f;
     [SerializeField] private float gravityScale = 5f;
+    [HideInInspector] private Rigidbody rb;
+    [HideInInspector] private CapsuleCollider playerCollider;
 
     [Header("Player Component")]
     [SerializeField] private Transform playerTransform;
@@ -124,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 point1 = center + Vector3.up * (playerCollider.height / 2 - playerCollider.radius);
         Vector3 point2 = center - Vector3.up * (playerCollider.height / 2 - playerCollider.radius);
 
-        return Physics.CapsuleCast(point1, point2, playerCollider.radius, Vector3.down, transform.localScale.y + 0.1f);
+        return Physics.CapsuleCast(point1, point2, playerCollider.radius, Vector3.down, transform.localScale.y + 0.1f, jumpLayerMask);
     }
     #endregion
 
