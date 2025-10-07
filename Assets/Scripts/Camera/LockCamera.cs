@@ -1,6 +1,5 @@
 using UnityEngine;
 using Unity.Cinemachine;
-using UnityEngine.Rendering;
 
 public class LockCamera : MonoBehaviour
 {
