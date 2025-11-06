@@ -12,7 +12,9 @@ public class CameraMovement : MonoBehaviour
     [Header("Camera")]
     private CinemachineCamera cameraFollowScript;
     private Transform orientation;
-    private bool activatedRotation;
+    private bool activatedRotation = false;
+    private float XRotation = 0f;
+    private float YRotation = 0f;
 
     private Vector3 direction;
 
@@ -27,7 +29,8 @@ public class CameraMovement : MonoBehaviour
         if (canMove)
         {
             Move();
-            Rotate();
+            if (activatedRotation)
+                Rotate();
         }
     }
 
@@ -37,6 +40,7 @@ public class CameraMovement : MonoBehaviour
     }
 
     #region Camera Movement
+
     public void OnCameraMovement(InputAction.CallbackContext context)
     {
         direction = context.ReadValue<Vector3>();
@@ -46,31 +50,19 @@ public class CameraMovement : MonoBehaviour
     {
         Vector3 playerForward = orientation.forward;
         Vector3 playerRight = orientation.right;
-        Vector3 playerUp = orientation.up;
 
         playerForward.Normalize();
         playerRight.Normalize();
-        playerUp.Normalize();
 
-        Vector3 moveDirection = playerForward * direction.z + playerRight * direction.x + playerUp * direction.y;
+        Vector3 moveDirection = playerForward * direction.z + playerRight * direction.x;
         moveDirection.Normalize();
 
         transform.position += moveDirection * moveSpeed * Time.deltaTime;
     }
-    
+
     public void Rotate()
     {
-        Vector3 viewDir = transform.position - new Vector3(cameraFollowScript.transform.position.x, transform.position.y, cameraFollowScript.transform.position.z);
-        orientation.forward = viewDir.normalized;
-
-        float horizontalInput = direction.x;
-        float verticalInput = direction.z;
-
-        Vector3 inputDir = orientation.forward * verticalInput + orientation.right * horizontalInput;
-        if (inputDir != Vector3.zero)
-        {
-            transform.forward = Vector3.Slerp(transform.forward, inputDir.normalized, Time.deltaTime * rotateSpeed);
-        }
+        transform.localRotation = Quaternion.Euler(XRotation,  YRotation, 0f);
     }
     #endregion
 
@@ -78,7 +70,7 @@ public class CameraMovement : MonoBehaviour
 
     public void ActivateCameraRotation(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.performed)
         {
             activatedRotation = true;
         }
@@ -88,14 +80,23 @@ public class CameraMovement : MonoBehaviour
         }
     }
 
-    public void OnCameraRotation(InputAction.CallbackContext context)
+    public void OnCameraRotationX(InputAction.CallbackContext context)
     {
-        print(context.ReadValue<Quaternion>());
+        if (activatedRotation && context.performed)
+        {
+            XRotation += context.ReadValue<float>() * rotateSpeed;
+            XRotation = Mathf.Clamp(XRotation, -90f, 90f);
+        }
     }
 
-    public void RotateCamera()
+    public void OnCameraRotationY(InputAction.CallbackContext context)
     {
-
+        if (activatedRotation && context.performed)
+        {
+            print(context.ReadValue<float>());
+            YRotation -= context.ReadValue<float>() * rotateSpeed;
+        }
     }
+
     #endregion
 }
