@@ -183,7 +183,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         cameraFollowScript.Radius = zoom;
-        print(currentRadiusCamera + "    " + zoom);
     }
 
     public void OnCameraZoom(InputAction.CallbackContext context)
