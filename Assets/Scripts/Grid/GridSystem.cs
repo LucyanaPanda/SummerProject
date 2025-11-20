@@ -1,4 +1,3 @@
-using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Cursor = UnityEngine.Cursor;
@@ -13,44 +12,26 @@ public class GridSystem : MonoBehaviour
     private bool isOnGridMode = false;
     private GameObject gridOverlayCell;
 
-    [Header("Player Component")]
-    [SerializeField] private GameObject player;
+    [Header("Player Script")]
+    [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private GameObject cinemachineCamera;
-    private PlayerMovement playerMovement;
-
-    [Header("Camera Component")]
-    private CinemachineCamera cinemachineCameraScript;
-    
 
     private void Start()
     {
         gridOverlayCell = Instantiate(gridOverlayCellPrefab, transform.position, Quaternion.identity);
         gridOverlayCell.SetActive(false);
-
-        playerMovement = player.GetComponent<PlayerMovement>();
-        cinemachineCameraScript = cinemachineCamera.GetComponent<CinemachineCamera>();
     }
 
     public void OnGridSystemMode(InputAction.CallbackContext context)
     {
         isOnGridMode = !isOnGridMode;
-
         if (!isOnGridMode)
         {
             gridOverlayCell.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            cinemachineCamera.SetActive(true);
             playerMovement.enabled = true;
-            gridOverlayCell.SetActive(false);
-            cinemachineCameraScript.Follow = player.transform;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = true;
-            playerMovement.enabled = false;
-            gridOverlayCell.SetActive(true);
-            cinemachineCameraScript.Follow = null;
         }
     }
 
@@ -58,6 +39,13 @@ public class GridSystem : MonoBehaviour
     {
         if (isOnGridMode)
         {
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+            cinemachineCamera.SetActive(false);
+            playerMovement.enabled = false;
+            gridOverlayCell.SetActive(true);
+
+            
             gridOverlayCell.transform.position = GetCellPosition();
         }
     }
