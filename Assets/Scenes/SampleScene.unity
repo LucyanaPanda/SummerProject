@@ -410,12 +410,16 @@ MonoBehaviour:
     m_ActionName: 'Camera/MouseMovement[/Mouse/delta/up,/Mouse/delta/down,/Mouse/delta/left,/Mouse/delta/right]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 1b71bc74-399e-447a-8c78-6ba09a447dca
-    m_ActionName: Camera/ActivateCameraRotation
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: f1524e7e-18f5-4de8-bd4e-5752ee54a74a
     m_ActionName: 'Camera/CameraRotation[/Mouse/delta/up,/Mouse/delta/down,/Mouse/delta/left,/Mouse/delta/right]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fe1a3e18-e10b-460b-8114-291929fc261b
+    m_ActionName: 'Camera/CameraRotationY[/Mouse/delta/left,/Mouse/delta/right]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 591a7a5a-7f7a-4a55-9eea-de67aa9b6cdc
+    m_ActionName: 'Camera/CursorConstructionMode[/Mouse/delta]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -1389,7 +1393,6 @@ MonoBehaviour:
   playerTransform: {fileID: 322040297}
   cameraFollowScript: {fileID: 697057912}
   currentRadius: 5
-  offSetFromCollision: 0.5
 --- !u!114 &697057916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1527,6 +1530,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: fe1a3e18-e10b-460b-8114-291929fc261b
     m_ActionName: 'Camera/CameraRotationY[/Mouse/delta/left,/Mouse/delta/right]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 210392113}
+        m_TargetAssemblyTypeName: GridSystem, Assembly-CSharp
+        m_MethodName: OnMouseMovement
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 591a7a5a-7f7a-4a55-9eea-de67aa9b6cdc
+    m_ActionName: 'Camera/CursorConstructionMode[/Mouse/delta]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Camera
@@ -1545,7 +1564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraMovement
   moveSpeed: 5
-  rotateSpeed: 1
+  rotateSpeed: 0.5
   canMove: 0
 --- !u!1 &832575517
 GameObject:
@@ -2096,7 +2115,7 @@ Transform:
   m_GameObject: {fileID: 1900466231}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

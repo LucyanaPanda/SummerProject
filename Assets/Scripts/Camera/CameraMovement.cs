@@ -62,7 +62,7 @@ public class CameraMovement : MonoBehaviour
 
     public void Rotate()
     {
-        transform.localRotation = Quaternion.Euler(XRotation,  YRotation, 0f);
+        transform.localRotation = Quaternion.Euler(-XRotation,  -YRotation, 0f);
     }
     #endregion
 
@@ -93,7 +93,6 @@ public class CameraMovement : MonoBehaviour
     {
         if (activatedRotation && context.performed)
         {
-            print(context.ReadValue<float>());
             YRotation -= context.ReadValue<float>() * rotateSpeed;
         }
     }

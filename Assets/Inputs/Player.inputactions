@@ -246,6 +246,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "CursorConstructionMode",
+                    "type": "Value",
+                    "id": "591a7a5a-7f7a-4a55-9eea-de67aa9b6cdc",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -411,6 +420,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "ActivateRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "93f02eaf-4bf4-44a9-933b-e76557bb95d2",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CursorConstructionMode",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
