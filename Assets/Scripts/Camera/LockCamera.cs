@@ -9,7 +9,6 @@ public class LockCamera : MonoBehaviour
     [Header("Camera Settings")]
     [SerializeField] private CinemachineOrbitalFollow cameraFollowScript;
     [SerializeField] private float currentRadius = 5f;
-    [SerializeField] private float offSetFromCollision = 0.5f;
     private bool isColliding = false;
 
     private void Update()
@@ -27,15 +26,15 @@ public class LockCamera : MonoBehaviour
             }
 
             float distance = Vector3.Magnitude(hit.point - playerTransform.position);
-            //if (distance <= 0.2f)
-            //{
-            //    cameraFollowScript.transform.position = - transform.position;
-            //    cameraFollowScript.transform.localRotation =  Quaternion.Euler(-transform.localRotation.x, -transform.localRotation.y, -transform.localRotation.z);
-            //    return;
-            //}
+            if (distance <= 0.2f)
+            {
+                cameraFollowScript.transform.position = -transform.position;
+                cameraFollowScript.transform.localRotation = Quaternion.Euler(-transform.localRotation.x, -transform.localRotation.y, -transform.localRotation.z);
+                return;
+            }
 
             distance = Mathf.Min(distance, currentRadius);
-            cameraFollowScript.Radius = distance - offSetFromCollision;
+            cameraFollowScript.Radius = distance;
         }
         else
         { 
