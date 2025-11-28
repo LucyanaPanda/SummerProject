@@ -8,7 +8,7 @@ public class LockCamera : MonoBehaviour
     
     [Header("Camera Settings")]
     [SerializeField] private CinemachineOrbitalFollow cameraFollowScript;
-    [SerializeField] private float currentRadius = 5f;
+    private float currentRadius = 5f;
     private bool isColliding = false;
 
     private void Update()
