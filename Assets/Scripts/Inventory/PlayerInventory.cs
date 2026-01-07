@@ -15,7 +15,7 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
-    private void AddToInventory(ObjectData data)
+    public void AddToInventory(ObjectData data)
     {
         if (inventory.ContainsKey(data))
         {
@@ -28,17 +28,29 @@ public class PlayerInventory : MonoBehaviour
         PrintInventoryIntoFile();
     }
 
+    public void AddToInventory(ObjectData data, int quantity)
+    {
+        inventory[data] = quantity;
+        PrintInventoryIntoFile();
+    }
+
     private void PrintInventoryIntoFile()
     {
-        using (StreamWriter sw = new StreamWriter(Application.dataPath + "/NewTextFile.txt", true))
+        string path = Application.dataPath + "/inventory.txt";
+        if (!File.Exists(path))
         {
-            sw.WriteLine("This is a new text file!");
-            string inventoryContent = "Current Inventory:\n";
-            foreach (var item in inventory)
-            {
-                inventoryContent += $"{item.Key.NameProduct}: {item.Value}\n";
-            }
-            sw.WriteLine(inventoryContent);
+            Debug.LogWarning("Inventory file does not exist.");
         }
+        string inventoryContent = "";
+        foreach (var item in inventory)
+        {
+            inventoryContent += $"{item.Key.ID}:{item.Key.NameProduct}:{item.Value}\n";
+        }
+        File.WriteAllText(path, inventoryContent);
+    }
+
+    public void ClearInventory()
+    {
+        inventory.Clear();
     }
 }

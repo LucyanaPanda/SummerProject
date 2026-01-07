@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f0303b7c0cf7b4696b9f83e003e5be, type: 3}
   m_Name: Carrot
   m_EditorClassIdentifier: Games.Objects::Games.Objects.ObjectScriptableObject
+  ID: 1
   NameProduct: Carrot
   PriceSell: 1
   PriceBuy: 2
   Icon: {fileID: 0}
-  ModelObject: {fileID: 0}
