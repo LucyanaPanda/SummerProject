@@ -1,0 +1,14 @@
+{
+    "name": "LucyanaPanda.AdditivesScenes.Runtime",
+    "rootNamespace": "LucyanaPanda.AdditivesScenes",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
