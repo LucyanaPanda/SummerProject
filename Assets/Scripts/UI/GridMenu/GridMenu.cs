@@ -14,7 +14,7 @@ public class GridMenu : MonoBehaviour
     [Header("UI Element")]
     [SerializeField] private RectTransform GridMenuPanel;
     [SerializeField] private GameObject menu;
-    [SerializeField] private GameObject smenuContent;
+    [SerializeField] private GameObject menuContent;
     [SerializeField] private GameObject slotPrefab;
     [SerializeField] private List<GameObject> catalog;
 

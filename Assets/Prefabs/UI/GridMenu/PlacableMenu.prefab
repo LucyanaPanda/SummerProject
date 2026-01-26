@@ -120,7 +120,10 @@ MonoBehaviour:
   animationDuration: 1
   offSetMaxX: 100
   GridMenuPanel: {fileID: 5457875942677647996}
-  menuContent: {fileID: 1482431392548749289}
+  menu: {fileID: 1482431392548749289}
+  menuContent: {fileID: 4985065349859177541}
+  slotPrefab: {fileID: 5152175397397164339, guid: fadbeac90fe2b9844825e4cfe65895b9, type: 3}
+  catalog: []
 --- !u!1 &1482431392548749289
 GameObject:
   m_ObjectHideFlags: 0
