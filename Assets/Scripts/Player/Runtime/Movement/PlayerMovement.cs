@@ -1,7 +1,6 @@
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Cursor = UnityEngine.Cursor;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent (typeof(CapsuleCollider))]
@@ -138,10 +137,7 @@ public class PlayerMovement : MonoBehaviour
             canMove = false;
 
             // Pause the camera follow script 
-            if (cameraFollowScript != null)
-                cameraFollowScript.enabled = false;
-            else
-                Debug.LogWarning("Camera follow script is not assigned.");
+            cameraFollowScript.enabled = false;
         }
         else if (context.canceled)
         {
@@ -151,12 +147,7 @@ public class PlayerMovement : MonoBehaviour
 
             // Re-enable player movement when the cursor is hidden
             canMove = true;
-
-            // Resume the camera follow script
-            if (cameraFollowScript != null)
-                cameraFollowScript.enabled = true;
-            else
-                Debug.LogWarning("Camera follow script is not assigned.");
+            cameraFollowScript.enabled = true;
         }
     }
     #endregion
@@ -166,17 +157,9 @@ public class PlayerMovement : MonoBehaviour
     private void Zoom(float zoomValue)
     {
         float currentRadiusCamera = cameraFollowScript.Radius;
-
         float zoom = currentRadiusCamera + zoomValue * zoomSpeed * Time.deltaTime;
 
-        if (zoom < maxDistance)
-        {
-            zoom = Mathf.Max(zoom, minDistance);
-        }
-        else
-        {
-            zoom = Mathf.Min(zoom, maxDistance);
-        }
+        zoom = zoom < maxDistance ? zoom : maxDistance;
 
         cameraFollowScript.Radius = zoom;
     }

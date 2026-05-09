@@ -8,18 +8,18 @@ namespace Lucyana.Player
 {
     public class PlayerInventory : MonoBehaviour
     {
-        private Dictionary<ObjectData, int> inventory = new Dictionary<ObjectData, int>();
+        private Dictionary<ObjectData, int> inventory = new ();
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.TryGetComponent<Item>(out Item item))
+            if (collision.gameObject.TryGetComponent(out Item item))
             {
                 ObjectData data = item.Loot();
                 AddToInventory(data);
             }
         }
 
-        public void AddToInventory(ObjectData data)
+        private void AddToInventory(ObjectData data)
         {
             if (inventory.ContainsKey(data))
             {

@@ -1,9 +1,7 @@
-using UnityEngine;
-
 namespace Lucyana.Objects
 {
-    public interface ILootableObject
+    public interface ILootableObject<T> where T : class
     {
-        ObjectData Loot();
+        T Loot();
     }
 }
