@@ -1,0 +1,14 @@
+{
+    "name": "Lucyana.InteractionSystem.Runtime",
+    "rootNamespace": "Lucyana.InteractionSystem",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

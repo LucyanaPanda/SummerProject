@@ -1,19 +1,22 @@
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(ObjectDataBank))]
-public class ObjectDataBankEditor : Editor
+namespace Lucyana.Objects.Editor
 {
-    //Made just for fun
-    public override void OnInspectorGUI()
+    [CustomEditor(typeof(ObjectDataBank))]
+    public class ObjectDataBankEditor : UnityEditor.Editor
     {
-        serializedObject.Update();
-        DrawDefaultInspector();
-
-        ObjectDataBank dataBank = (ObjectDataBank)target;
-        if (GUILayout.Button("Set IDs"))
+        //Made just for fun
+        public override void OnInspectorGUI()
         {
-            dataBank.SetIds();
+            serializedObject.Update();
+            DrawDefaultInspector();
+
+            ObjectDataBank dataBank = (ObjectDataBank)target;
+            if (GUILayout.Button("Set IDs"))
+            {
+                dataBank.SetIds();
+            }
         }
     }
 }
