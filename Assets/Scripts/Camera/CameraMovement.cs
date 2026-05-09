@@ -37,6 +37,8 @@ public class CameraMovement : MonoBehaviour
     public void SwtichedToConstructionMode(InputAction.CallbackContext context)
     {
         canMove = !canMove;
+        XRotation = -orientation.eulerAngles.x;
+        YRotation = -orientation.eulerAngles.y;
     }
 
     #region Camera Movement
