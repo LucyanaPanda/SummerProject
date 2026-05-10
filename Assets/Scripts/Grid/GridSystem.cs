@@ -16,7 +16,7 @@ public class GridSystem : MonoBehaviour
     [Header("Player Component")]
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject cinemachineCamera;
-    private PlayerMovement playerMovement;
+    private PlayerMovement _playerMovement;
 
     [Header("Camera Component")]
     private CinemachineCamera cinemachineCameraScript;
@@ -27,7 +27,7 @@ public class GridSystem : MonoBehaviour
         gridOverlayCell = Instantiate(gridOverlayCellPrefab, transform.position, Quaternion.identity);
         gridOverlayCell.SetActive(false);
 
-        playerMovement = player.GetComponent<PlayerMovement>();
+        _playerMovement = player.GetComponent<PlayerMovement>();
         cinemachineCameraScript = cinemachineCamera.GetComponent<CinemachineCamera>();
     }
 
@@ -40,7 +40,7 @@ public class GridSystem : MonoBehaviour
             gridOverlayCell.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-            playerMovement.enabled = true;
+            _playerMovement.enabled = true;
             gridOverlayCell.SetActive(false);
             cinemachineCameraScript.Follow = player.transform;
         }
@@ -48,7 +48,7 @@ public class GridSystem : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
-            playerMovement.enabled = false;
+            _playerMovement.enabled = false;
             gridOverlayCell.SetActive(true);
             cinemachineCameraScript.Follow = null;
         }

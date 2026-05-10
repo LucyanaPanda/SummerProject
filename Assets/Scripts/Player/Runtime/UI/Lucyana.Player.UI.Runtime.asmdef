@@ -1,0 +1,16 @@
+{
+    "name": "Lucyana.Player.UI.Runtime",
+    "rootNamespace": "Lucyana.Player.UI",
+    "references": [
+        "GUID:decb611ca1ca2be4c8e7f5d88f24c301"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
