@@ -137,7 +137,6 @@ GameObject:
   - component: {fileID: 210392112}
   - component: {fileID: 210392113}
   - component: {fileID: 210392114}
-  - component: {fileID: 210392115}
   m_Layer: 0
   m_Name: PlayerBody
   m_TagString: Player
@@ -469,21 +468,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 210392104}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 397f12dfb2fad794d8dc6c76d2684441, type: 3}
+  m_Script: {fileID: 11500000, guid: 274731643a6d6c94894d0576301b840e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
---- !u!114 &210392115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210392104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c3a40a8d0cb00248a8035b793a0eb94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerInventorySave
+  m_EditorClassIdentifier: Lucyana.Player.Runtime::Lucyana.Player.PlayerInventoryController
   bank: {fileID: 11400000, guid: 8509d5a10ee1dc04db71b9c22e97911f, type: 2}
 --- !u!1 &220797089
 GameObject:
@@ -2275,7 +2262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 72488427219297757, guid: c7901687ec2a22d4e8a387f7b8fbe1aa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.065
       objectReference: {fileID: 0}
     - target: {fileID: 72488427219297757, guid: c7901687ec2a22d4e8a387f7b8fbe1aa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2313,6 +2300,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Carrot
       objectReference: {fileID: 0}
+    - target: {fileID: 1245996312913272498, guid: c7901687ec2a22d4e8a387f7b8fbe1aa, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: -7707712014596365416, guid: 29b186f22f7e0d24292a512bc10c128c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

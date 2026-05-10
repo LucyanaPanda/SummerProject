@@ -1,0 +1,16 @@
+{
+    "name": "Lucyana.InventorySystem.Runtime",
+    "rootNamespace": "Lucyana.InventorySystem",
+    "references": [
+        "GUID:e9a4fb4268cab8a4383e78fee668e9ee"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
