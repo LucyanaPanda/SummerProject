@@ -2,13 +2,15 @@ using UnityEngine;
 
 namespace Lucyana.Player.UI
 {
-    public class ShowInteraction : MonoBehaviour
+    public class InteractionIndicatorUI : MonoBehaviour
     {
-        public PlayerInteract playerInteract;
         public GameObject interactionCanvas;
+        private PlayerInteract playerInteract;
 
         void Start()
         {
+            playerInteract = PlayerInteract.Instance;
+            
             playerInteract.onNearestInteractableFound += ShowInteractionMessage;
             playerInteract.onNearestInteractableNotFound += (HideInteractionMessage);
         }

@@ -21,13 +21,6 @@ namespace Lucyana.Objects.Items
 
         public abstract ObjectData Loot();
 
-        #region GetData
-
-        public ObjectData GetData()
-        {
-            return data;
-        }
-
-        #endregion
+        public ObjectData GetData() => data;
     }
 }

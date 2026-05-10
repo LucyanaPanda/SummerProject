@@ -2,7 +2,10 @@
     "name": "Lucyana.Player.UI.Runtime",
     "rootNamespace": "Lucyana.Player.UI",
     "references": [
-        "GUID:decb611ca1ca2be4c8e7f5d88f24c301"
+        "GUID:decb611ca1ca2be4c8e7f5d88f24c301",
+        "GUID:26459f5ea8c4d6e4a9bacccc3df38e78",
+        "GUID:5d0ed4530c129f641b1e491960f0aa26",
+        "GUID:fd3ba8e705734bf7bde096557e89d49c"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
