@@ -1,33 +1,26 @@
-using System.IO;
 using UnityEngine;
 using Lucyana.Objects;
+using Lucyana.InventorySystem;
+using Lucyana.Objects.Items;
 
 namespace Lucyana.Player
 {
-    [RequireComponent(typeof(PlayerInventory))]
-    public class PlayerInventorySave : MonoBehaviour
-    {
-        PlayerInventory playerInventory;
+    [RequireComponent(typeof(CapsuleCollider))]
+    public class PlayerInventoryController : MonoBehaviour
+    {    
         [SerializeField] private ObjectDataBank bank;
+        private Inventory inventory = new();
 
         private void Awake()
         {
-            playerInventory = GetComponent<PlayerInventory>();
-            InventoryLoad();
+            InitializeInventory();
         }
-
-        private void InventoryLoad()
+        
+        private void InitializeInventory()
         {
-            //It will load the inventory from the save file but there is no notion of emplacement yet
-            playerInventory.ClearInventory();
-            string path = Application.dataPath + "/inventory.txt";
-            if (!File.Exists(path))
-            {
-                File.Create(path).Close();
-                return;
-            }
-
-            string content = File.ReadAllText(path);
+            inventory.name = "PlayerInventory";
+            string content = InventorySave.InventoryLoad(inventory);
+        
             string[] lines = content.Split('\n');
             foreach (string line in lines)
             {
@@ -36,11 +29,11 @@ namespace Lucyana.Player
                     string[] parts = line.Split(':');
                     ObjectData data = GetObjectDataFromBank(parts[1].Trim());
                     if (data != null)
-                        playerInventory.AddToInventory(data, int.Parse(parts[2]));
+                        inventory.AddToInventory(data, uint.Parse(parts[2]));
                 }
             }
         }
-
+    
         private ObjectData GetObjectDataFromBank(string nameProduct)
         {
             if (string.IsNullOrEmpty(nameProduct))
@@ -57,6 +50,15 @@ namespace Lucyana.Player
                 }
             }
             return null;
+        }
+        
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.TryGetComponent(out Item item))
+            {
+                ObjectData data = item.Loot();
+                inventory.AddToInventory(data);
+            }
         }
     }
 }
