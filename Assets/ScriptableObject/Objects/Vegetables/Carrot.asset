@@ -16,4 +16,4 @@ MonoBehaviour:
   NameProduct: Carrot
   PriceSell: 1
   PriceBuy: 2
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 2bd5bf88db16fec4caf4fadf3edeb3fc, type: 3}

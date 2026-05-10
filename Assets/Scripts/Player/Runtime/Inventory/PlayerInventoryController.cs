@@ -1,17 +1,24 @@
+using System;
 using UnityEngine;
 using Lucyana.Objects;
 using Lucyana.InventorySystem;
 using Lucyana.Objects.Items;
+using Lucyana.Utilities;
+using UnityEngine.InputSystem;
 
 namespace Lucyana.Player
 {
     [RequireComponent(typeof(CapsuleCollider))]
-    public class PlayerInventoryController : MonoBehaviour
+    public class PlayerInventoryController : Singleton<PlayerInventoryController>
     {    
+        public event Action<Inventory> onInventoryOpened;
+        
         [SerializeField] private ObjectDataBank bank;
+        [SerializeField] private Vector2Int size = new Vector2Int(8, 3);
+        
         private Inventory inventory = new();
 
-        private void Awake()
+        public override void Awake()
         {
             InitializeInventory();
         }
@@ -19,6 +26,7 @@ namespace Lucyana.Player
         private void InitializeInventory()
         {
             inventory.name = "PlayerInventory";
+            inventory.size = size;
             string content = InventorySave.InventoryLoad(inventory);
         
             string[] lines = content.Split('\n');
@@ -33,7 +41,16 @@ namespace Lucyana.Player
                 }
             }
         }
+
+        public void OnInventoryOpened(InputAction.CallbackContext context)
+        {
+            if (context.started)
+            {
+                onInventoryOpened?.Invoke(inventory);
+            }
+        }
     
+        #region Helpers
         private ObjectData GetObjectDataFromBank(string nameProduct)
         {
             if (string.IsNullOrEmpty(nameProduct))
@@ -51,13 +68,14 @@ namespace Lucyana.Player
             }
             return null;
         }
+        #endregion
         
         private void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.TryGetComponent(out Item item))
             {
-                ObjectData data = item.Loot();
-                inventory.AddToInventory(data);
+                if (inventory.AddToInventory(item.GetData()))
+                    item.Loot();
             }
         }
     }

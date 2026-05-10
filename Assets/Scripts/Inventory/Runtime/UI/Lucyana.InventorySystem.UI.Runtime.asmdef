@@ -1,13 +1,10 @@
 {
-    "name": "Lucyana.Player.Runtime",
-    "rootNamespace": "Lucyana.Player",
+    "name": "Lucyana.InventorySystem.UI.Runtime",
+    "rootNamespace": "Lucyana.InventorySystem.UI",
     "references": [
-        "GUID:75469ad4d38634e559750d17036d5f7c",
-        "GUID:4307f53044263cf4b835bd812fc161a4",
-        "GUID:7496e04a3c9609e49951c9d726187d1c",
-        "GUID:e9a4fb4268cab8a4383e78fee668e9ee",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
         "GUID:5d0ed4530c129f641b1e491960f0aa26",
-        "GUID:26459f5ea8c4d6e4a9bacccc3df38e78"
+        "GUID:e9a4fb4268cab8a4383e78fee668e9ee"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

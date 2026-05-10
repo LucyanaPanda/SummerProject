@@ -2,11 +2,12 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Lucyana.InteractionSystem;
+using Lucyana.Utilities;
 
 namespace Lucyana.Player
 {
     [RequireComponent(typeof(CapsuleCollider))]
-    public class PlayerInteract : MonoBehaviour
+    public class PlayerInteract : Singleton<PlayerInteract>
     {
         [Header("Interaction Settings")] [SerializeField]
         private float interactionRange = 1.5f;
@@ -22,8 +23,9 @@ namespace Lucyana.Player
         public event Action onNearestInteractableFound;
         public event Action onNearestInteractableNotFound;
 
-        private void Awake()
+        public override void Awake()
         {
+            base.Awake();
             playerCollider = GetComponent<CapsuleCollider>();
         }
 
