@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Lucyana.Attributs;
 using UnityEngine;
 
 namespace Lucyana.Objects
@@ -6,8 +7,20 @@ namespace Lucyana.Objects
     [CreateAssetMenu(fileName = "Objects", menuName = "Objects/Create Object Data Bank")]
     public class ObjectDataBank : ScriptableObject
     {
-        public List<ObjectData> allObjectsData;
+        public static ObjectDataBank Instance;
+        [Readonly] public List<ObjectData> allObjectsData = new List<ObjectData>();
 
+        public ObjectDataBank()
+        {
+            if (Instance != null && Instance != this)
+            {
+                
+                DestroyImmediate(this);
+                return;
+            }
+            Instance = this;
+        }
+        
         public void SetIds()
         {
             uint maxId = 0;
@@ -27,6 +40,12 @@ namespace Lucyana.Objects
                     obj.ID = maxId;
                 }
             }
+        }
+
+        public void AddObjectData(ObjectData objData)
+        {
+            objData.ID = (uint)(allObjectsData.FindLast().ID + 1);
+            allObjectsData.Add(objData);
         }
     }
 }

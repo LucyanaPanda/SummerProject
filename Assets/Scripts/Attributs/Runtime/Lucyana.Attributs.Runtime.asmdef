@@ -1,9 +1,7 @@
 {
-    "name": "Lucyana.Objects.Runtime",
-    "rootNamespace": "Lucyana.Objects",
-    "references": [
-        "GUID:9145a39be23b3ad4e8759f4eafb99113"
-    ],
+    "name": "Lucyana.Attributs.Runtime",
+    "rootNamespace": "Lucyana.Attributs",
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
