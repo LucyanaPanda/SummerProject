@@ -1,10 +1,12 @@
 {
-    "name": "Lucyana.Objects.Runtime",
-    "rootNamespace": "Lucyana.Objects",
+    "name": "Lucyana.Attributs.Editor",
+    "rootNamespace": "Lucyana.Attributs.Editor",
     "references": [
         "GUID:9145a39be23b3ad4e8759f4eafb99113"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
