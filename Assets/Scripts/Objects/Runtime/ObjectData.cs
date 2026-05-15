@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Lucyana.Objects
 {
+    [DefaultExecutionOrder(-100)]
     [CreateAssetMenu(fileName = "Objects", menuName = "Objects/Create New Object")]
     public class ObjectData : ScriptableObject
     {
@@ -12,13 +13,11 @@ namespace Lucyana.Objects
         public int PriceBuy;
         public Sprite Icon;
 
-        public ObjectData()
+        public void OnEnable()
         {
             if (ObjectDataBank.Instance == null)
-            {
-                Debug.LogError("[ObjectData] Object Data Bank Not Found");
                 return;
-            }
+            
             ObjectDataBank.Instance.AddObjectData(this);
         }
     }

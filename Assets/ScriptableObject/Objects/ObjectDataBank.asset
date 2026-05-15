@@ -14,7 +14,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectDataBank
   allObjectsData:
   - {fileID: 11400000, guid: 96c4e08183b4b5a408d7808a6708147a, type: 2}
-  - {fileID: 11400000, guid: dd249bb393bcf8549aecb8d884e45a75, type: 2}
-  - {fileID: 11400000, guid: 60b243b06a5fc8443a35f74d77f4b0c7, type: 2}
-  - {fileID: 11400000, guid: f16ae8c92caf20c45bbb1aec29a008fe, type: 2}
-  - {fileID: 11400000, guid: dd249bb393bcf8549aecb8d884e45a75, type: 2}
