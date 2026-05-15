@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using Lucyana.Attributs;
 using UnityEngine;
-
 namespace Lucyana.Objects
 {
+    [DefaultExecutionOrder(-200)]
     [CreateAssetMenu(fileName = "Objects", menuName = "Objects/Create Object Data Bank")]
     public class ObjectDataBank : ScriptableObject
     {
@@ -44,7 +44,11 @@ namespace Lucyana.Objects
 
         public void AddObjectData(ObjectData objData)
         {
-            objData.ID = (uint)(allObjectsData.FindLast().ID + 1);
+            if (allObjectsData.Contains(objData)) return;
+            
+            objData.ID = allObjectsData.Count > 0
+                ? allObjectsData[allObjectsData.Count - 1].ID + 1
+                : 1;
             allObjectsData.Add(objData);
         }
     }

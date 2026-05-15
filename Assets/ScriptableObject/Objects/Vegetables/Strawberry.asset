@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9f0303b7c0cf7b4696b9f83e003e5be, type: 3}
-  m_Name: HO 2
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectData
-  ID: 4
-  NameProduct: HO 2
-  PriceSell: 0
-  PriceBuy: 0
-  Icon: {fileID: 0}
+  m_Name: Strawberry
+  m_EditorClassIdentifier: Lucyana.Objects.Runtime::Lucyana.Objects.ObjectData
+  ID: 2
+  NameProduct: 
+  PriceSell: 3
+  PriceBuy: 5
+  Icon: {fileID: 21300000, guid: 2bd5bf88db16fec4caf4fadf3edeb3fc, type: 3}
