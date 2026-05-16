@@ -221,6 +221,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 124669778}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &124669780 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 124669778}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1001 &139241406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -323,6 +334,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 139241406}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &139241408 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 139241406}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1 &152194162
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,6 +577,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 168811803}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &168811805 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 168811803}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1001 &175685920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -657,6 +690,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 175685920}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &175685922 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 175685920}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1001 &296710127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -759,6 +803,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 296710127}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &296710129 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 296710127}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1 &428903043
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,6 +1018,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 504259030}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &504259032 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 504259030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1001 &554800068
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1065,6 +1131,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 554800068}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &554800070 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 554800068}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1001 &580458427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1167,6 +1244,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 580458427}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &580458429 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 580458427}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1 &735552405
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,6 +1264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 735552406}
+  - component: {fileID: 735552407}
   m_Layer: 0
   m_Name: PlayerUI
   m_TagString: Untagged
@@ -1199,6 +1288,51 @@ Transform:
   - {fileID: 428903044}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &735552407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735552405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71a98ee7a8fb47a986c38065203822f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.Player.UI.Runtime::Lucyana.Player.UI.PlayerInventoryUI
+  inventorySlots:
+  - {fileID: 4289855795283692536}
+  - {fileID: 1959669576}
+  - {fileID: 139241408}
+  - {fileID: 124669780}
+  - {fileID: 1667527355}
+  - {fileID: 1321621272}
+  - {fileID: 881288518}
+  - {fileID: 1083477834}
+  - {fileID: 554800070}
+  - {fileID: 1434843103}
+  - {fileID: 168811805}
+  - {fileID: 1921154244}
+  - {fileID: 1574254249}
+  - {fileID: 1315055339}
+  - {fileID: 1650676421}
+  - {fileID: 867404136}
+  - {fileID: 1502172593}
+  - {fileID: 784354741}
+  - {fileID: 2024088721}
+  - {fileID: 296710129}
+  - {fileID: 2069990393}
+  - {fileID: 928792063}
+  - {fileID: 1341440753}
+  - {fileID: 580458429}
+  - {fileID: 175685922}
+  - {fileID: 1265006284}
+  - {fileID: 504259032}
+  - {fileID: 1924882012}
+  - {fileID: 1125145065}
+  - {fileID: 1098025462}
+  inventoryGO: {fileID: 428903043}
+  inventoryCloseButton: {fileID: 1100920784}
 --- !u!1 &738363668
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,6 +1571,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 784354739}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &784354741 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 784354739}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1001 &867404134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1539,6 +1684,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 867404134}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &867404136 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 867404134}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1001 &881288516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1641,6 +1797,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 881288516}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &881288518 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 881288516}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1 &889154268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1879,6 +2046,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 928792061}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &928792063 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 928792061}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1001 &1083477832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1981,6 +2159,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 1083477832}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1083477834 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 1083477832}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1001 &1098025460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2083,6 +2272,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 1098025460}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1098025462 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 1098025460}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1 &1100920782
 GameObject:
   m_ObjectHideFlags: 0
@@ -2306,6 +2506,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 1125145063}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1125145065 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 1125145063}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1001 &1265006282
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2408,6 +2619,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 1265006282}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1265006284 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 1265006282}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1 &1284139050
 GameObject:
   m_ObjectHideFlags: 0
@@ -2588,6 +2810,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 1315055337}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1315055339 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 1315055337}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1001 &1321621270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2690,6 +2923,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 1321621270}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1321621272 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 1321621270}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1001 &1341440751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2792,6 +3036,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 1341440751}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1341440753 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 1341440751}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1 &1372170981
 GameObject:
   m_ObjectHideFlags: 0
@@ -2930,6 +3185,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 1434843101}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1434843103 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 1434843101}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1001 &1502172591
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3032,6 +3298,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 1502172591}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1502172593 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 1502172591}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1001 &1574254247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3134,6 +3411,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 1574254247}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1574254249 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 1574254247}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1001 &1650676419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3236,6 +3524,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 1650676419}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1650676421 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 1650676419}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1001 &1667527353
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3338,6 +3637,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 1667527353}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1667527355 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 1667527353}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1001 &1921154242
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3440,6 +3750,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 1921154242}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1921154244 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 1921154242}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1001 &1924882010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3542,6 +3863,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 1924882010}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1924882012 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 1924882010}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1001 &1959669574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3644,6 +3976,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 1959669574}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1959669576 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 1959669574}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1001 &2024088719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3746,6 +4089,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 2024088719}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2024088721 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 2024088719}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1001 &2069990391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3848,6 +4202,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 2069990391}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2069990393 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 2069990391}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1001 &4289855795283692534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3950,6 +4315,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920600465087400393, guid: 7798cf545a625104282a349a399597ef, type: 3}
   m_PrefabInstance: {fileID: 4289855795283692534}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4289855795283692536 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659503896664210155, guid: 7798cf545a625104282a349a399597ef, type: 3}
+  m_PrefabInstance: {fileID: 4289855795283692534}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea10a34d35f1e46af1fafcdb969e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

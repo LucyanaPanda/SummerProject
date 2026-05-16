@@ -9,15 +9,13 @@ namespace Lucyana.InventorySystem.UI
         [SerializeField] private Image icon;
         [SerializeField] private TextMeshProUGUI quantityText;
         
-        public uint ID { get; private set; }
-        
-        public void Initialize(InventoryData inventoryData, uint id)
+        public void Initialize(InventoryData inventoryData)
         {
             if (inventoryData == null) return;
-
+            
+            gameObject.SetActive(true);
             icon.sprite = inventoryData.objectData.Icon;
             quantityText.text = inventoryData.quantity.ToString();
-            ID = id;
         }
     }
 }

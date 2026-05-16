@@ -11,16 +11,17 @@ namespace Lucyana.Player
     [RequireComponent(typeof(CapsuleCollider))]
     public class PlayerInventoryController : Singleton<PlayerInventoryController>
     {    
-        public event Action<Inventory> onInventoryOpened;
-        
         [SerializeField] private ObjectDataBank bank;
         [SerializeField] private Vector2Int size = new Vector2Int(8, 3);
         
         private Inventory inventory = new();
+        public Action<Inventory> onInventoryOpened;
 
         public override void Awake()
         {
+            base.Awake();
             InitializeInventory();
+            inventory.onInventoryOpened += ExecuteOnInventoryOpened;
         }
         
         private void InitializeInventory()
@@ -32,13 +33,20 @@ namespace Lucyana.Player
             string[] lines = content.Split('\n');
             foreach (string line in lines)
             {
-                if (!string.IsNullOrWhiteSpace(line))
-                {
-                    string[] parts = line.Split(':');
-                    ObjectData data = GetObjectDataFromBank(parts[1].Trim());
-                    if (data != null)
-                        inventory.AddToInventory(data, uint.Parse(parts[2]));
-                }
+                if (string.IsNullOrWhiteSpace(line))
+                    continue;
+
+                string[] parts = line.Split(':');
+
+                if (!uint.TryParse(parts[0], out uint itemID))
+                    continue;
+
+                ObjectData data = ObjectDataBank.Instance.GetObjectDataFromBank(itemID);
+
+                if (data != null)
+                    inventory.AddToInventory(data, uint.Parse(parts[2]));
+                else 
+                    Debug.LogError($"Could not parse item ID {itemID}");
             }
         }
 
@@ -46,29 +54,14 @@ namespace Lucyana.Player
         {
             if (context.started)
             {
-                onInventoryOpened?.Invoke(inventory);
+                inventory.InvokeOnInventoryOpened();
             }
         }
-    
-        #region Helpers
-        private ObjectData GetObjectDataFromBank(string nameProduct)
-        {
-            if (string.IsNullOrEmpty(nameProduct))
-            {
-                Debug.LogWarning("NameProduct were invalid.");
-                return null;
-            }
 
-            foreach (ObjectData data in bank.allObjectsData)
-            {
-                if (data.NameProduct == nameProduct)
-                {
-                    return data;
-                }
-            }
-            return null;
+        private void ExecuteOnInventoryOpened(Inventory _)
+        {
+            onInventoryOpened?.Invoke(inventory);
         }
-        #endregion
         
         private void OnCollisionEnter(Collision collision)
         {
