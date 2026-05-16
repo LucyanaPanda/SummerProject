@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Lucyana.Objects;
@@ -10,6 +11,9 @@ namespace Lucyana.InventorySystem
         public string name;
         public Vector2Int size;
         private Dictionary<uint, InventoryData> inventory = new ();
+        
+        public event Action<Inventory> onInventoryOpened;
+        public int Count => inventory.Count;
 
         public bool AddToInventory(ObjectData data)
         {
@@ -69,6 +73,11 @@ namespace Lucyana.InventorySystem
         public void ClearInventory()
         {
             inventory.Clear();
+        }
+
+        public void InvokeOnInventoryOpened()
+        {
+            onInventoryOpened?.Invoke(this);
         }
 
         #region IEnumerable
