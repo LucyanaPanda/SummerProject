@@ -62,7 +62,7 @@ public class GridSystem : MonoBehaviour
         }
     }
 
-    public Vector3 GetCellPosition()
+    private Vector3 GetCellPosition()
     {
         Vector3 mouseScreenPosition = Mouse.current.position.ReadValue();
         mouseScreenPosition.z = Camera.main.nearClipPlane;
