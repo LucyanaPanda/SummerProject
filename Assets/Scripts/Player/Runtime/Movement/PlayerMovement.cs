@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement Settings")]
     [SerializeField] private float moveSpeed;
     [SerializeField] private float rotateSpeed;
-    [field: SerializeField] public bool canMove {get; private set;}
+    [field: SerializeField] public bool CanMove {get; set;}
 
     [Header("Jump Settings")]
     [SerializeField] private LayerMask jumpLayerMask;
@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         playerCollider = GetComponent<CapsuleCollider>();
-        canMove = true;
+        CanMove = true;
     }
 
     private void Start()
@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (canMove)
+        if (CanMove)
         {
             Rotate();
             Move();
@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Rotate()
     {
-        if (canMove)
+        if (CanMove)
         {
             // rotate orientation
             Vector3 viewDir = playerTransform.position - new Vector3(cameraFollowScript.transform.position.x, playerTransform.position.y, cameraFollowScript.transform.position.z);
@@ -135,7 +135,7 @@ public class PlayerMovement : MonoBehaviour
             Cursor.visible = true;
 
             // Disable player movement when the cursor is shown
-            canMove = false;
+            CanMove = false;
 
             // Pause the camera follow script 
             cameraFollowScript.enabled = false;
@@ -147,7 +147,7 @@ public class PlayerMovement : MonoBehaviour
             Cursor.visible = false;
 
             // Re-enable player movement when the cursor is hidden
-            canMove = true;
+            CanMove = true;
             cameraFollowScript.enabled = true;
         }
     }
