@@ -12,7 +12,9 @@ namespace Lucyana.Player
     public class PlayerInventoryController : Singleton<PlayerInventoryController>
     {    
         [SerializeField] private ObjectDataBank bank;
-        [SerializeField] private Vector2Int size = new Vector2Int(8, 3);
+        [SerializeField] private Vector2Int size = new Vector2Int(10, 3);
+        
+        [SerializeField] private PlayerMovement playerMovement;
         
         private Inventory inventory = new();
         public Action<Inventory> onInventoryOpened;
@@ -23,11 +25,17 @@ namespace Lucyana.Player
             InitializeInventory();
             inventory.onInventoryOpened += ExecuteOnInventoryOpened;
         }
-        
+
+        private void OnValidate()
+        {
+            inventory.size = size;
+        }
+
         private void InitializeInventory()
         {
             inventory.name = "PlayerInventory";
             inventory.size = size;
+            inventory.InitializeInventoryPosition();
             string content = InventorySave.InventoryLoad(inventory);
         
             string[] lines = content.Split('\n');
@@ -42,9 +50,13 @@ namespace Lucyana.Player
                     continue;
 
                 ObjectData data = ObjectDataBank.Instance.GetObjectDataFromBank(itemID);
-
+                
+                string[] positionComponent = parts[3].Split(',', '(', ')');
+                Vector2Int position = new Vector2Int(int.Parse(positionComponent[1]), int.Parse(positionComponent[2]));
+                Debug.Log("ItemID: " + itemID + " | Position: " + position);
+                
                 if (data != null)
-                    inventory.AddToInventory(data, uint.Parse(parts[2]));
+                    inventory.AddToInventory(data, uint.Parse(parts[2]), position);
                 else 
                     Debug.LogError($"Could not parse item ID {itemID}");
             }

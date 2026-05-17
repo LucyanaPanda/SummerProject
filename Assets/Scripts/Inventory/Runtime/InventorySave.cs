@@ -19,7 +19,7 @@ namespace Lucyana.InventorySystem
             
             foreach (InventoryData data in inventory)
             {
-                inventoryContent += $"{data.objectData.ID}:{data.objectData.NameProduct}:{data.quantity}\n";
+                inventoryContent += $"{data.objectData.ID}:{data.objectData.NameProduct}:{data.quantity}:{data.position}\n";
             }
             File.WriteAllText(path, inventoryContent);
         }

@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement Settings")]
     [SerializeField] private float moveSpeed;
     [SerializeField] private float rotateSpeed;
-    [SerializeField] private bool canMove = true;
+    [field: SerializeField] public bool canMove {get; private set;}
 
     [Header("Jump Settings")]
     [SerializeField] private LayerMask jumpLayerMask;
@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         playerCollider = GetComponent<CapsuleCollider>();
+        canMove = true;
     }
 
     private void Start()
