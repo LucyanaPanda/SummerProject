@@ -3,13 +3,12 @@ using UnityEngine;
 using Lucyana.Objects;
 using Lucyana.InventorySystem;
 using Lucyana.Objects.Items;
-using Lucyana.Utilities;
 using UnityEngine.InputSystem;
 
 namespace Lucyana.Player
 {
     [RequireComponent(typeof(CapsuleCollider))]
-    public class PlayerInventoryController : Singleton<PlayerInventoryController>
+    public class PlayerInventoryController : MonoBehaviour
     {    
         [SerializeField] private ObjectDataBank bank;
         [SerializeField] private Vector2Int size = new Vector2Int(10, 3);
@@ -19,9 +18,8 @@ namespace Lucyana.Player
         private Inventory inventory = new();
         public Action<Inventory> onInventoryOpened;
 
-        public override void Awake()
+        public void Awake()
         {
-            base.Awake();
             InitializeInventory();
             inventory.onInventoryOpened += ExecuteOnInventoryOpened;
         }
@@ -53,7 +51,6 @@ namespace Lucyana.Player
                 
                 string[] positionComponent = parts[3].Split(',', '(', ')');
                 Vector2Int position = new Vector2Int(int.Parse(positionComponent[1]), int.Parse(positionComponent[2]));
-                Debug.Log("ItemID: " + itemID + " | Position: " + position);
                 
                 if (data != null)
                     inventory.AddToInventory(data, uint.Parse(parts[2]), position);

@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using Lucyana.InventorySystem;
 using Lucyana.InventorySystem.UI;
 using UnityEngine;
@@ -10,19 +8,15 @@ namespace Lucyana.Player.UI
     public class PlayerInventoryUI : InventoryUI
     {
         [Header("UI Elements")] 
-        [SerializeField] private GameObject inventoryGO;
         [SerializeField] private Button inventoryCloseButton;
         
-        private PlayerInventoryController inventoryController;
-        private bool isInterfaceOpened;
+        [SerializeField] private PlayerInventoryController inventoryController;
+        [SerializeField] private PlayerMovement playerMovement;
 
         private void Start()
         {
-            inventoryController = PlayerInventoryController.Instance;
             inventoryController.onInventoryOpened += ToggleInventoryInterface;
-
             inventoryCloseButton.onClick.AddListener(HideInventoryInterface);
-            
             HideInventoryInterface();
         }
 
@@ -31,24 +25,15 @@ namespace Lucyana.Player.UI
             isInterfaceOpened = !isInterfaceOpened;
             if (isInterfaceOpened)
             {
+                playerMovement.CanMove = false;
                 ShowInventoryInterface();
                 DisplayInventory(inventory);
             }
             else
             {
+                playerMovement.CanMove = true;
                 HideInventoryInterface();
             }
-        }
-
-        private void ShowInventoryInterface()
-        {
-            inventoryGO.SetActive(true);
-        }
-
-        private void HideInventoryInterface()
-        {
-            inventoryGO.SetActive(false);
-            isInterfaceOpened = false;
         }
     }
 }

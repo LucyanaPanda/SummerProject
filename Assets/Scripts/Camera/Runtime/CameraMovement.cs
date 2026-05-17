@@ -26,15 +26,14 @@ namespace Lucyana.Camera
 
         private void Update()
         {
-            if (canMove)
-            {
-                Move();
-                if (activatedRotation)
-                    Rotate();
-            }
+            if (!canMove) return;
+            
+            Move();
+            if (activatedRotation)
+                Rotate();
         }
 
-        public void SwtichedToConstructionMode(InputAction.CallbackContext context)
+        public void SwitchedToConstructionMode(InputAction.CallbackContext context)
         {
             canMove = !canMove;
             XRotation = -orientation.eulerAngles.x;
@@ -48,7 +47,7 @@ namespace Lucyana.Camera
             direction = context.ReadValue<Vector3>();
         }
 
-        public void Move()
+        private void Move()
         {
             Vector3 playerForward = orientation.forward;
             Vector3 playerRight = orientation.right;
@@ -62,7 +61,7 @@ namespace Lucyana.Camera
             transform.position += moveDirection * moveSpeed * Time.deltaTime;
         }
 
-        public void Rotate()
+        private void Rotate()
         {
             transform.localRotation = Quaternion.Euler(-XRotation, -YRotation, 0f);
         }

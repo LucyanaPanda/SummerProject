@@ -12,6 +12,7 @@ namespace Lucyana.InventorySystem.UI
         [SerializeField] protected InventorySlotUI inventorySlotPrefab;
         
         protected Dictionary<Vector2Int, InventorySlotUI> inventorySlots = new Dictionary<Vector2Int, InventorySlotUI>();
+        protected bool isInterfaceOpened;
 
         protected void DisplayInventory(Inventory inventory)
         {
@@ -47,6 +48,7 @@ namespace Lucyana.InventorySystem.UI
                     else
                     {
                         InventorySlotUI slot = Instantiate(inventorySlotPrefab, inventoryContentParent.transform);
+                        slot.OnSlotCreated(position);
                         inventorySlots[position] = slot;
                     }
                 }
@@ -60,6 +62,17 @@ namespace Lucyana.InventorySystem.UI
                 Destroy(inventorySlots[position]);
                 inventorySlots.Remove(position);
             }
+        }
+        
+        protected void ShowInventoryInterface()
+        {
+            inventoryPanelGO.SetActive(true);
+        }
+
+        protected void HideInventoryInterface()
+        {
+            inventoryPanelGO.SetActive(false);
+            isInterfaceOpened = false;
         }
     }
 }
