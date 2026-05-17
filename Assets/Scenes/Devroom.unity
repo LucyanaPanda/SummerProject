@@ -280,7 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rotateSpeed: 10
-  canMove: 1
+  <canMove>k__BackingField: 0
   jumpLayerMask:
     serializedVersion: 2
     m_Bits: 192
@@ -488,6 +488,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Lucyana.Player.Runtime::Lucyana.Player.PlayerInventoryController
   bank: {fileID: 11400000, guid: 8509d5a10ee1dc04db71b9c22e97911f, type: 2}
+  size: {x: 10, y: 3}
+  playerMovement: {fileID: 210392110}
 --- !u!1 &220797089
 GameObject:
   m_ObjectHideFlags: 0
