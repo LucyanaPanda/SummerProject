@@ -398,101 +398,25 @@ MonoBehaviour:
     m_ActionId: c6a8cc1a-be92-442b-8e4b-d30ca8e88e16
     m_ActionName: 'Player/CameraZoom[/Mouse/scroll/down,/Mouse/scroll/up]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 697057917}
-        m_TargetAssemblyTypeName: Lucyana.Camera.CameraMovement, Lucyana.Camera.Runtime
-        m_MethodName: OnCameraMovement
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 297ca30a-34b0-4059-a116-54405c860616
     m_ActionName: 'Camera/CameraMovement[/Keyboard/q,/Keyboard/e,/Keyboard/a,/Keyboard/d,/Keyboard/w,/Keyboard/s]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 697057917}
-        m_TargetAssemblyTypeName: Lucyana.Camera.CameraMovement, Lucyana.Camera.Runtime
-        m_MethodName: SwitchedToConstructionMode
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 5b2f0029-06e9-4755-98f9-f4c8a2ad64d9
     m_ActionName: 'Camera/ConstructionMode[/Keyboard/c]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 697057917}
-        m_TargetAssemblyTypeName: Lucyana.Camera.CameraMovement, Lucyana.Camera.Runtime
-        m_MethodName: ActivateCameraRotation
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 8d2c4ac0-c10e-46d3-8eba-a1fcd8c6e8a2
     m_ActionName: 'Camera/MouseMovement[/Mouse/delta/up,/Mouse/delta/down,/Mouse/delta/left,/Mouse/delta/right]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 697057917}
-        m_TargetAssemblyTypeName: Lucyana.Camera.CameraMovement, Lucyana.Camera.Runtime
-        m_MethodName: OnCameraRotationX
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: f1524e7e-18f5-4de8-bd4e-5752ee54a74a
     m_ActionName: 'Camera/CameraRotation[/Mouse/delta/up,/Mouse/delta/down,/Mouse/delta/left,/Mouse/delta/right]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 697057917}
-        m_TargetAssemblyTypeName: Lucyana.Camera.CameraMovement, Lucyana.Camera.Runtime
-        m_MethodName: OnCameraRotationY
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: fe1a3e18-e10b-460b-8114-291929fc261b
     m_ActionName: 'Camera/CameraRotationY[/Mouse/delta/left,/Mouse/delta/right]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 697057908}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 591a7a5a-7f7a-4a55-9eea-de67aa9b6cdc
-    m_ActionName: 'Camera/CursorConstructionMode[/Mouse/delta]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 210392114}
@@ -509,6 +433,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 2b649ebb-fc33-4bf0-9562-c30a365749a6
     m_ActionName: 'Player/Inventory[/Keyboard/b]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 591a7a5a-7f7a-4a55-9eea-de67aa9b6cdc
+    m_ActionName: 'Camera/CursorConstructionMode[/Mouse/delta]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -683,7 +611,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 232449599}
-  - component: {fileID: 232449598}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -691,21 +618,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &232449598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 232449597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc91c8ec528d0ba499fe85538af841a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Lucyana.Scenes.Runtime::Lucyana.Scenes.SceneController
-  currentScene:
-    m_Handle: 0
-  additivesScenesLoaded: []
 --- !u!4 &232449599
 Transform:
   m_ObjectHideFlags: 0
@@ -2029,6 +1941,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: fe1a3e18-e10b-460b-8114-291929fc261b
     m_ActionName: 'Camera/CameraRotationY[/Mouse/delta/left,/Mouse/delta/right]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2b649ebb-fc33-4bf0-9562-c30a365749a6
+    m_ActionName: 'Player/Inventory[/Keyboard/b]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 210392113}
