@@ -14,9 +14,10 @@ namespace Lucyana.Player
         [SerializeField] private Vector2Int size = new Vector2Int(10, 3);
         
         [SerializeField] private PlayerMovement playerMovement;
+        [SerializeField] private GameObject playerCamera;
         
         private Inventory inventory = new();
-        public Action<Inventory> onInventoryOpened;
+        public Func<Inventory, bool> onInventoryOpened;
 
         public void Awake()
         {
@@ -63,13 +64,20 @@ namespace Lucyana.Player
         {
             if (context.started)
             {
-                inventory.InvokeOnInventoryOpened();
+                bool isOpened = inventory.InvokeOnInventoryOpened();
+                playerMovement.enabled = !isOpened;
+                playerCamera.SetActive(!isOpened);
+                Cursor.visible = isOpened;
+                
+                Cursor.lockState = isOpened ? CursorLockMode.Confined: CursorLockMode.Locked;
             }
         }
 
-        private void ExecuteOnInventoryOpened(Inventory _)
+        private bool ExecuteOnInventoryOpened(Inventory _)
         {
-            onInventoryOpened?.Invoke(inventory);
+            if (onInventoryOpened != null)
+                return onInventoryOpened.Invoke(inventory);
+            return false;
         }
         
         private void OnCollisionEnter(Collision collision)

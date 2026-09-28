@@ -490,6 +490,7 @@ MonoBehaviour:
   bank: {fileID: 11400000, guid: 8509d5a10ee1dc04db71b9c22e97911f, type: 2}
   size: {x: 3, y: 10}
   playerMovement: {fileID: 210392110}
+  playerCamera: {fileID: 697057908}
 --- !u!1 &220797089
 GameObject:
   m_ObjectHideFlags: 0

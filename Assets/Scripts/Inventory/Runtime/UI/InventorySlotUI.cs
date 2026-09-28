@@ -18,7 +18,7 @@ namespace Lucyana.InventorySystem.UI
             gameObject.name = $"Slot_{position.x}_{position.y}";
         }
         
-        public void Initialize(InventoryData inventoryData)
+        public void Initialize(InventoryData inventoryData, Inventory inventory)
         {            
             gameObject.SetActive(true);
             
@@ -38,10 +38,12 @@ namespace Lucyana.InventorySystem.UI
         public void BlankSlot()
         {
             currentObjectData = null;
-            
             icon.sprite = null;
             icon.color = Color.lightGray;
             quantityText.text = "";
         }
+        
+        public bool IsEmpty() => currentObjectData == null;
+        public InventoryData GetCurrentInventoryData() => currentObjectData;
     }
 }

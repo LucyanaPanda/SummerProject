@@ -20,7 +20,7 @@ namespace Lucyana.Player.UI
             HideInventoryInterface();
         }
 
-        private void ToggleInventoryInterface(Inventory inventory)
+        private bool ToggleInventoryInterface(Inventory inventory)
         {
             isInterfaceOpened = !isInterfaceOpened;
             if (isInterfaceOpened)
@@ -34,6 +34,7 @@ namespace Lucyana.Player.UI
                 playerMovement.CanMove = true;
                 HideInventoryInterface();
             }
+            return isInterfaceOpened;
         }
     }
 }

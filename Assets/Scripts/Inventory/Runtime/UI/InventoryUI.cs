@@ -21,7 +21,7 @@ namespace Lucyana.InventorySystem.UI
             List<Vector2Int> slotsOccupied = new List<Vector2Int>();
             foreach (InventoryData data in inventory)
             {
-                inventorySlots[data.position].Initialize(data);
+                inventorySlots[data.position].Initialize(data , inventory);
                 slotsOccupied.Add(data.position);
             }
 

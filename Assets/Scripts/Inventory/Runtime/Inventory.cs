@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Lucyana.Objects;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace Lucyana.InventorySystem
 {
@@ -14,7 +13,7 @@ namespace Lucyana.InventorySystem
         private Dictionary<uint, InventoryData> inventory = new ();
         private Dictionary<Vector2Int, uint> inventoryPositions = new ();
         
-        public event Action<Inventory> onInventoryOpened;
+        public event Func<Inventory, bool> onInventoryOpened;
         public int Count => inventory.Count;
 
         public void InitializeInventoryPosition()
@@ -80,6 +79,8 @@ namespace Lucyana.InventorySystem
 
         public bool AddToInventory(ObjectData data, uint quantity, Vector2Int position)
         {
+            if (quantity == 0) return false;
+            
             Vector2Int newPosition = ReturnValidPosition(position);
             if (!inventory.TryAdd(data.ID, new InventoryData(this, data, quantity, newPosition)))
             {
@@ -113,6 +114,8 @@ namespace Lucyana.InventorySystem
 
         public bool RemoveFromInventory(ObjectData data, uint quantity)
         {
+            if (quantity == 0) return false;
+            
             if (!inventory.ContainsKey(data.ID)) return false;
             
             inventory[data.ID].quantity -= quantity;
@@ -131,9 +134,11 @@ namespace Lucyana.InventorySystem
         
          #endregion
 
-        public void InvokeOnInventoryOpened()
+        public bool InvokeOnInventoryOpened()
         {
-            onInventoryOpened?.Invoke(this);
+            if (onInventoryOpened != null)
+                return onInventoryOpened.Invoke(this);
+            return false;
         }
 
         #region IEnumerable

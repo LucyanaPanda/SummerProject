@@ -1,0 +1,14 @@
+{
+    "name": "Lucyana.DragSystem.Runtime",
+    "rootNamespace": "Lucyana.DragSystem",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -193,6 +193,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4920600465087400393}
   - component: {fileID: 8659503896664210155}
+  - component: {fileID: 9139611274893076913}
+  - component: {fileID: 22804891423815116}
   m_Layer: 0
   m_Name: Object_Slot
   m_TagString: Untagged
@@ -235,6 +237,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventorySlotUI
   icon: {fileID: 7466282933971492925}
   quantityText: {fileID: 1447568874538072471}
+--- !u!114 &9139611274893076913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778831504856035871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dd957514353467fa792c24ee8ce6564, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventoryDraggableItem
+--- !u!114 &22804891423815116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778831504856035871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8508486e5d314ae393ab94b736df9bec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Lucyana.InventorySystem.UI.Runtime::Lucyana.InventorySystem.UI.InventoryDropReceiver
 --- !u!1 &5278871743541701300
 GameObject:
   m_ObjectHideFlags: 0
