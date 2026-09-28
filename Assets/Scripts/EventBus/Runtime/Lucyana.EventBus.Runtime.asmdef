@@ -1,0 +1,14 @@
+{
+    "name": "Lucyana.EventBus.Runtime",
+    "rootNamespace": "Lucyana.EventBus",
+    "references": ["GUID:bc6b4c50b7d14ce4d84b9c9ad87748cf"],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
